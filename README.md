@@ -1,6 +1,8 @@
 # VEAT Quantifies Implicit Associations in Text-to-Video Generator Sora and Reveals Challenges in Bias Mitigation
 
-VEAT (Video Embedding Association Test) and SC-VEAT (Single-Category VEAT) extend Embedding Association Tests to the video domain. In this repository, we provide the code for:
+We introduce the **Video Embedding Association Test (VEAT)** and **Single-Category VEAT (SC-VEAT)** to quantify implicit associations in generated videos, validate the methods by reproducing established IAT/WEAT-style effects and OASIS-based valence benchmarks, and then apply them to measure **race- and gender-related valence associations** as well as biases across **17 occupations** and **7 awards**.  We find large valence-based disparities (e.g., European Americans more associated with pleasantness than African Americans; women more associated with pleasantness than men) and show that effect sizes correlate with **real-world demographic distributions** in occupations and awards, suggesting that T2V bias reflects historical disparities.  Finally, we evaluate **prompt-based debiasing** and observe that while effect sizes often shrink in magnitude, the approach can unintentionally **amplify harms** in contexts already associated with marginalized groups, underscoring the need for rigorous evaluation and cautious deployment of T2V systems. 
+
+In this repository, we provide the code for:
 
 - extracting frame-level embeddings from generated videos using CLIP image encoder, mean-pooling them into a video embedding;
 - computing association **effect sizes (Cohen’s d)** and **p-values** between target and attribute video sets.
